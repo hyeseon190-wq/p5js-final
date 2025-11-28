@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5.js 최종 과제 모음</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { margin-bottom: 30px; }
+        
+        /* 그리드 레이아웃 설정 (2열 배치) */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 1:1 비율로 2개씩 */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 각 과제 박스 스타일 */
+        .sketch-box {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 { font-size: 1.2rem; margin: 10px 0; color: #333; }
+
+        /* p5.js 화면을 보여주는 창문(iframe) */
+        iframe {
+            width: 100%;
+            height: 400px; /* 캔버스 높이에 맞춰 조절 가능 */
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+
+        /* 모바일 화면에서는 한 줄로 나오게 */
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎨 나의 P5.js 작품 갤러리</h1>
+
+    <div class="gallery-container">
+        <!-- 1번 과제 -->
+        <div class="sketch-box">
+            <h2>과제 1</h2>
+            <iframe src="./hw1/index.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 4번 과제 (요구사항: 1번 옆에 4번 배치) -->
+        <div class="sketch-box">
+            <h2>과제 4</h2>
+            <iframe src="./hw4/index.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 2번 과제 -->
+        <div class="sketch-box">
+            <h2>과제 2</h2>
+            <iframe src="./hw2/index.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 3번 과제 (요구사항: 2번 옆에 3번 배치) -->
+        <div class="sketch-box">
+            <h2>과제 3</h2>
+            <iframe src="./hw3/index.html" scrolling="no"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
